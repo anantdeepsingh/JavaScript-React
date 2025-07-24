@@ -1,0 +1,33 @@
+function Hello(){
+return <h1>Hello!</h1>
+}
+
+// browers dont understand jsx directly it compiled to React.createElement
+
+function Greeting(props) {
+  return <h1>Hello, {props.name}!</h1>;
+}
+
+// Usage
+<Greeting name="Anantdeep" />
+
+
+// state 
+
+data that is been changed in the compnensts is managed by useState hook 
+const [count, setCount] = useState(0); // count starts from 0
+// syntax
+
+it returns an array
+count -> current value
+setCount -> function that updates value
+
+function Counter(){
+const [count,setCount]=useState(0);
+return (
+<div>
+<p>Count<\p>
+<button onClick={()=> setCount(count+1)}>+<\button>
+</div>
+);
+}
